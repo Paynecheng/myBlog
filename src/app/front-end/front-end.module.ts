@@ -9,6 +9,8 @@ import { ArticleListComponent } from './commonComponent/article-list/article-lis
 import { FrontEndService } from './front-end.service';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 
+import { addEllipsis } from '../common';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -20,7 +22,8 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
         HeaderComponent,
         FrontEndComponent,
         HomeComponent,
-        ArticleListComponent
+        ArticleListComponent,
+        addEllipsis
     ],
     providers: [
         { provide: NZ_I18N, useValue: zh_CN },

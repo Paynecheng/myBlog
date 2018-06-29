@@ -9,3 +9,9 @@
 .articleList span{
     margin-right: 30px;
 }
+.home_title{
+    font-size: 28px;
+}
+.home_text{
+    line-height: 30px;
+}
