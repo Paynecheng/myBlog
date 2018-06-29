@@ -1,0 +1,11 @@
+.articleList{
+    box-sizing: border-box;
+}
+.articleList a{
+    display: block;
+    padding: 10px 15px;    
+    color: #3c3c3c;
+}
+.articleList span{
+    margin-right: 30px;
+}
