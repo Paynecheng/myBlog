@@ -1,0 +1,9 @@
+.footer{
+    background: #fff;
+    opacity: .5;
+    color: #3c3c3c
+}
+.footer p{
+    line-height: 50px;
+    text-align: center;
+}

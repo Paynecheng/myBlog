@@ -12,9 +12,17 @@ export class HomeComponent implements OnInit {
     private frontEndService: FrontEndService
   ) { }
 
-  category: any[]
+  article: any[]
 
   ngOnInit() {
+    this.getArticle();
+  }
+
+  getArticle(): void {
+    this.frontEndService.getArticle()
+    .subscribe(res => {
+      this.article = res;
+    })
   }
 
 }

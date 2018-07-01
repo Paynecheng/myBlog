@@ -8,10 +8,16 @@
 }
 .articleList span{
     margin-right: 30px;
+    margin-left: 5px;
 }
 .home_title{
     font-size: 28px;
 }
 .home_text{
     line-height: 30px;
+}
+.articleList{
+    margin-bottom: 30px;
+    background: #fff;
+    opacity: .5;
 }

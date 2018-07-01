@@ -1,20 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { Pipe, PipeTransform } from '@angular/core';
-
-
-// @Pipe({
-//   name: 'addEllipsis'
-// })
-
-// class addEllipsis implements PipeTransform {
-//   transform(value: string): string {
-//       return value + '...';
-//   }
-// }
-
-
-
-
+import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
@@ -24,8 +8,10 @@ export class ArticleListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  @Input() article
 
+  ngOnInit() {
+    console.log('tt',this.article)
   }
 
 }

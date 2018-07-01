@@ -6,14 +6,25 @@ import { Observable } from 'rxjs';
 @Injectable()
 
 export class FrontEndService {
-    private getCategoryUrl: string = `${host}frontEnd/category`;
 
     constructor (
         private http: HttpClient
     ) {}
 
+    private getCategoryUrl: string = `${host}frontEnd/category`;    
+    private getArticleUrl: string = `${host}frontEnd/article`;
+    private getListUrl: string = `${host}list/`;
+
     getCategory(): Observable<any> {
         return this.http.get(this.getCategoryUrl);
+    }
+
+    getArticle(): Observable<any> {
+        return this.http.get(this.getArticleUrl);
+    }
+
+    getList(id: string): Observable<any> {
+        return this.http.get(this.getListUrl + id);
     }
 }
 

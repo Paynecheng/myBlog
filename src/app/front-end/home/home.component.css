@@ -11,10 +11,6 @@
 .wrap{
     margin-top: 80px;
 }
-.contentWrap{
-    background: #fff;
-    opacity: .5;
-}
 .panel{
     box-sizing: border-box;
     height: 300px;

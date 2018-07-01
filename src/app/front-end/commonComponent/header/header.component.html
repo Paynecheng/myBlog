@@ -4,7 +4,7 @@
     <li class="related">
       <a>我的笔记</a>
       <ul class="category">
-        <li *ngFor='let item of category'><a href="">{{ item.name }}</a></li>
+        <li *ngFor='let item of category'><a routerLink='/front-end/list/{{item.category_id}}'>{{ item.name }}</a></li>
       </ul>
     </li>
     <li><a href="">我的笔记</a></li>

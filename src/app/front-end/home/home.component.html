@@ -7,7 +7,7 @@
   <div class="contentWrap">
     <div nz-row nzGutter='16'>
       <div nz-col class='gutter-row' nzSpan='18'>
-        <app-article-list></app-article-list>
+        <app-article-list *ngFor='let item of article' [article]='item'></app-article-list>
       </div>
       <div nz-col class="gutter-row" nzSpan='6'>
         right
