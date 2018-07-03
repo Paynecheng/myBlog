@@ -5,7 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+  providers: [FrontEndService]
 })
 export class ListComponent implements OnInit {
 
@@ -14,19 +15,20 @@ export class ListComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  list: any[] 
+  list: any[];
 
   ngOnInit() {
-    const id  = this.route.snapshot.paramMap.get('id');
-    this.getList(id);
+    console.log('ttt');
+    this.getList();
   }
 
-  getList(id: string) :void {
+  getList() :void {
+    const id  = this.route.snapshot.paramMap.get('id');
     this.frontEndService.getList(id)
     .subscribe(res => {
       this.list = res;
-      console.log('list', this.list)
-    })
+      console.log('list', this.list);
+    });
   }
 
 }

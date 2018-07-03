@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     private frontEndService: FrontEndService
   ) { }
 
-  article: any[]
+  article: any[];
 
   ngOnInit() {
     this.getArticle();
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this.frontEndService.getArticle()
     .subscribe(res => {
       this.article = res;
-    })
+    });
   }
 
 }

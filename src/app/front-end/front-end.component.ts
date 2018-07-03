@@ -13,9 +13,10 @@ export class FrontEndComponent implements OnInit {
     private frontEndService: FrontEndService
   ) { }
 
-  category: any[]
+  category: any[];
 
   ngOnInit() {
+    console.log('sb');
     this.getCategory();
   }
 
@@ -23,7 +24,7 @@ export class FrontEndComponent implements OnInit {
     this.frontEndService.getCategory()
     .subscribe((res: any[]) => {
       this.category = res;
-    })
+    });
   }
 
 }

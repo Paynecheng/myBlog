@@ -28,6 +28,4 @@ const FrondEndRoutes: Routes = [
     ]
 })
 
-export class FrontEndRouting {
-
-}
+export class FrontEndRouting { }
