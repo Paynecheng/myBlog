@@ -12,6 +12,8 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { addEllipsis } from '../common';
 import { FooterComponent } from './commonComponent/footer/footer.component';
 import { ListComponent } from './list/list.component';
+import { ArticleDetailComponent } from './commonComponent/article-detail/article-detail.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
     imports: [
@@ -27,7 +29,9 @@ import { ListComponent } from './list/list.component';
         ArticleListComponent,
         addEllipsis,
         FooterComponent,
-        ListComponent
+        ListComponent,
+        ArticleDetailComponent,
+        DetailComponent
     ],
     providers: [
         { provide: NZ_I18N, useValue: zh_CN },

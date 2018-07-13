@@ -11,7 +11,6 @@ export class ArticleListComponent implements OnInit {
   @Input() article
 
   ngOnInit() {
-    
   }
 
 }

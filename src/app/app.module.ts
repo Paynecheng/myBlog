@@ -17,14 +17,15 @@ import { AppRoutingModule } from './app.routing';
 import { AdminModule } from './admin/admin.module';
 // import { HeaderComponent } from './front-end/header/header.component';
 import { FrontEndModule } from './front-end/front-end.module';
+import {PageNotFoundComponent} from './PageNotFoundComponent';
 
 
 // registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent
-    
+    AppComponent,
+    PageNotFoundComponent
     // FrontEndComponent,
     // HeaderComponent,
   ],

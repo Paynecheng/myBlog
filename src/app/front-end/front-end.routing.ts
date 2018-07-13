@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FrontEndComponent } from './front-end.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
+import { DetailComponent } from './detail/detail.component';
 
 const FrondEndRoutes: Routes = [
     {
@@ -14,6 +15,9 @@ const FrondEndRoutes: Routes = [
             },
             {
                 path: 'list/:id', component: ListComponent
+            },
+            {
+                path: 'detail/:id', component: DetailComponent
             }
         ]
     }
