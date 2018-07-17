@@ -30,70 +30,71 @@ export class EditArticleComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    if(this.id === '0'){
+    if (this.id === '0') {
       this.fetchCategory();
-    }else{
+    } else {
       this.fetchCurrentArticle(this.id);
     }
   }
 
-  fetchCategory():void {
+  fetchCategory(): void {
     this.adminService.getCategory()
         .subscribe(result => {
           this.listOfOption = result;
           this.yyy = result[0].name;
-        })
+        });
   }
 
-  fetchCurrentArticle(id:string): void {
+  fetchCurrentArticle(id: string): void {
     this.adminService.getArticleById(id)
     .subscribe(result => {
       this.listOfOption = result;
       this.yyy = result[0].category;
       this.title = result[0].title;
       this.description = result[0].description;
-    })
+    });
   }
 
   submitArticle(): void {
 
-    if(this.title.length<=0 || this.yyy.length<=0 || this.description.length<0){
+    if (this.title.length <= 0 || this.yyy.length <= 0 || this.description.length < 0) {
       this.message.create('error', '请填写完所有字段');
       return;
     }
 
     this.category_id = this.listOfOption.find((item) => item.name === this.yyy).category_id;
 
-    const articleObj:Article = {
+    const articleObj: Article = {
       title: this.title,
       description: this.description,
       category_id: this.category_id
-    }
+    };
 
     this.adminService.postArticle(articleObj)
     .subscribe((result => {
-      if(result['status'] === 1){
+      if (result['status'] === 1) {
         this.message.create('success', result['message']);
         this.router.navigate(['/admin/article']);
-      }else{
+      } else {
         this.message.create('error', result['message']);
       }
-    }))
+    }));
   }
 
   modifyArticle(): void {
     this.adminService.modifyArticle({title: this.title, description: this.description, id: this.id})
     .subscribe((res) => {
-      if(res['status'] === 1){
+      if (res['status'] === 1) {
         this.message.create('success', res['message']);
         this.router.navigate(['/admin/article']);
-      }else{
+      } else {
         this.message.create('error', res['message']);
       }
-    })
+    });
   }
 
   cancle(): void {
-    this.router.navigate(['/admin/article']); 
+    this.router.navigate(['/admin/article']);
   }
+
 }

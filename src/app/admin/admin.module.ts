@@ -15,14 +15,19 @@ import zh from '@angular/common/locales/zh';
 import { ArticleComponent } from './article/article.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 
+
+import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+
+
 registerLocaleData(zh);
 
 @NgModule({
-    imports:[
+    imports: [
         CommonModule,
         FormsModule,
         NgZorroAntdModule,
-        AdminRoutingModule
+        AdminRoutingModule,
+        LMarkdownEditorModule
     ],
     declarations: [
         AdminComponent,

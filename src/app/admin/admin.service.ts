@@ -8,22 +8,22 @@ import { Observable } from 'rxjs';
 
 export class AdminService {
 
-    private getCategoryUrl: string = `${host}admin/getCategory`;
-    private postCategoryUrl: string = `${host}admin/addCategory`;
-    private deleteCategoryUrl: string = `${host}admin/deleteCategory`;
+    private getCategoryUrl = `${host}admin/getCategory`;
+    private postCategoryUrl = `${host}admin/addCategory`;
+    private deleteCategoryUrl = `${host}admin/deleteCategory`;
 
-    private getArticleUrl: string = `${host}admin/getArticle`;
-    private posArticleUrl: string = `${host}admin/postArticle`;
-    private getArticleByIdUrl: string = `${host}admin/getArticleById`;
+    private getArticleUrl = `${host}admin/getArticle`;
+    private posArticleUrl = `${host}admin/postArticle`;
+    private getArticleByIdUrl = `${host}admin/getArticleById`;
 
-    private modifyArticleUrl: string = `${host}admin/modifyArticle`;
+    private modifyArticleUrl = `${host}admin/modifyArticle`;
 
-    private deleteArticleUrl: string = `${host}admin/deleteArticle`;
+    private deleteArticleUrl = `${host}admin/deleteArticle`;
 
     private headers = new HttpHeaders({
         'Content-Type': 'application/json;charset=utf-8'
     });
-    
+
     constructor(
         private http: HttpClient
     ) {}
@@ -32,8 +32,7 @@ export class AdminService {
         return this.http.get(this.getCategoryUrl);
     }
 
-    postCategory(category:string): Observable<any> {
-        
+    postCategory(category: string): Observable<any> {
         return this.http.post(this.postCategoryUrl, {name: category}, {headers: this.headers})
     }
 
@@ -51,7 +50,7 @@ export class AdminService {
     }
 
     postArticle(articleObj: Article): Observable<any> {
-        return this.http.post(this.posArticleUrl, articleObj, {headers:this.headers});
+        return this.http.post(this.posArticleUrl, articleObj, {headers: this.headers});
     }
 
     modifyArticle(obj): Observable<any> {

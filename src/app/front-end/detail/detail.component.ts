@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FrontEndService } from '../front-end.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -11,16 +12,21 @@ export class DetailComponent implements OnInit {
   public article;
 
   constructor(
-    private frontEndService: FrontEndService
+    private frontEndService: FrontEndService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.route.params.subscribe((params) => {
+        this.detailArticle(params.id);
+    } );
   }
 
-  detailArticle(): void {
-    this.frontEndService.getDetailArticle()
+  detailArticle(id): void {
+    this.frontEndService.getDetailArticle(id)
     .subscribe((res) => {
-      this.article = res;
+      this.article = res[0];
+      console.log('article', this.article);
     });
   }
 

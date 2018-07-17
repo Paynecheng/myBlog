@@ -8,7 +8,7 @@ export class ArticleListComponent implements OnInit {
 
   constructor() { }
 
-  @Input() article
+  @Input() article;
 
   ngOnInit() {
   }
