@@ -18,6 +18,12 @@ a{
 body{
     color: #3c3c3c;
 }
+code{
+    white-space: normal;
+    word-break: break-all;
+}
+
+
 /* a{
     text-decoration: none;
 } */

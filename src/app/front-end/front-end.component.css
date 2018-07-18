@@ -17,21 +17,21 @@
     background: url(../../assets/images/bg.jpg) no-repeat center;
     background-size: cover;
 }
-.wrap{
+.c_wrap{
     margin-top: 80px;
 }
-.panel{
+.c_panel{
     box-sizing: border-box;
     height: 300px;
 }
-.panel h3{
+.c_panel h3{
     font-size: 38px;
     color: aliceblue
 }
-.panel h3:first-child{
+.c_panel h3:first-child{
     padding-top: 100px;
     text-align: left;
 }
-.panel h3:last-child{
+.c_panel h3:last-child{
     text-align: right
 }

@@ -9,7 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
 
-  public article;
+  public article = {
+    title: '',
+    description: '',
+    last_time: '',
+    views: '',
+    category: ''
+  };
 
   constructor(
     private frontEndService: FrontEndService,
@@ -26,7 +32,6 @@ export class DetailComponent implements OnInit {
     this.frontEndService.getDetailArticle(id)
     .subscribe((res) => {
       this.article = res[0];
-      console.log('article', this.article);
     });
   }
 

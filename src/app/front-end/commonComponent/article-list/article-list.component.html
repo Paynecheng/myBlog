@@ -6,8 +6,7 @@
       <i class="anticon anticon-calendar"></i><span>{{article.last_date | date: 'yyyy-MM-dd'}}</span>
       <i class="anticon anticon-eye"></i><span>{{article.views}}</span>
     </p>
-    <p class="home_text">
-        {{ article.description | slice:0:200 | addEllipsis }}
-    </p>
+    <div class="home_text" [innerHTML]="article.description | slice:0:200 | AddEllipsis">
+    </div>
   </a>
 </div>

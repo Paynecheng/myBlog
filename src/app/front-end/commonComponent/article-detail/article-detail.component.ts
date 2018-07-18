@@ -12,6 +12,7 @@ export class ArticleDetailComponent implements OnInit {
   @Input() article;
 
   ngOnInit() {
+    console.log('tttttttt');
   }
 
 }

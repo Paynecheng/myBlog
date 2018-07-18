@@ -5,5 +5,5 @@
 		<i class="anticon anticon-eye"></i><span>{{article.views}}</span>
 		<i class="anticon anticon-tags"></i><span>{{article.category}}</span>
 	</p>
-	<div class="article_desc">{{article.description | ToHtml}}</div>
+	<div class="article_desc" [innerHtml]="article.description"></div>
 </div>

@@ -9,7 +9,7 @@ import { ArticleListComponent } from './commonComponent/article-list/article-lis
 import { FrontEndService } from './front-end.service';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 
-import {addEllipsis, ToHtml} from '../common';
+import { AddEllipsis} from '../common';
 import { FooterComponent } from './commonComponent/footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { ArticleDetailComponent } from './commonComponent/article-detail/article-detail.component';
@@ -27,8 +27,7 @@ import { DetailComponent } from './detail/detail.component';
         FrontEndComponent,
         HomeComponent,
         ArticleListComponent,
-        addEllipsis,
-        ToHtml,
+        AddEllipsis,
         FooterComponent,
         ListComponent,
         ArticleDetailComponent,

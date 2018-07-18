@@ -17,6 +17,7 @@ import { EditArticleComponent } from './edit-article/edit-article.component';
 
 
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+import { LoginComponent } from './login/login.component';
 
 
 registerLocaleData(zh);
@@ -33,7 +34,8 @@ registerLocaleData(zh);
         AdminComponent,
         CategoryComponent,
         ArticleComponent,
-        EditArticleComponent
+        EditArticleComponent,
+        LoginComponent
     ],
     providers: [
         { provide: NZ_I18N, useValue: zh_CN },
