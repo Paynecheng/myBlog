@@ -4,6 +4,8 @@ import { FrontEndComponent } from './front-end.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
+import {MusicModule} from './music/music.module';
+import {MusicHomeComponent} from './music/MusicHome.component';
 
 const FrondEndRoutes: Routes = [
     {
@@ -18,6 +20,9 @@ const FrondEndRoutes: Routes = [
             },
             {
                 path: 'detail/:id', component: DetailComponent
+            },
+            {
+                path: 'music', component: MusicHomeComponent
             }
         ]
     }
@@ -25,6 +30,7 @@ const FrondEndRoutes: Routes = [
 
 @NgModule({
     imports: [
+        MusicModule,
         RouterModule.forChild(FrondEndRoutes)
     ],
     exports: [

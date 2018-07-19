@@ -36,8 +36,8 @@ import {PageNotFoundComponent} from './PageNotFoundComponent';
     HttpClientModule,
     // NgZorroAntdModule,
     AdminModule,
+    FrontEndModule,
     AppRoutingModule,
-    FrontEndModule
   ],
   // providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

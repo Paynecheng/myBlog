@@ -15,12 +15,16 @@ import { ListComponent } from './list/list.component';
 import { ArticleDetailComponent } from './commonComponent/article-detail/article-detail.component';
 import { DetailComponent } from './detail/detail.component';
 
+import { MusicModule } from './music/music.module';
+
+
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         FrontEndRouting,
-        NgZorroAntdModule
+        NgZorroAntdModule,
+        MusicModule
     ],
     declarations: [
         HeaderComponent,

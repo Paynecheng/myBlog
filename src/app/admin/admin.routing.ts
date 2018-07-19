@@ -15,7 +15,7 @@ const adminRoutes: Routes = [
         children: [
             {
                 path: '',
-                component: LoginComponent
+                component: CategoryComponent
             },
             {
                 path: 'category',
