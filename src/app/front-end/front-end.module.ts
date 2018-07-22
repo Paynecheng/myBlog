@@ -14,6 +14,7 @@ import { FooterComponent } from './commonComponent/footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { ArticleDetailComponent } from './commonComponent/article-detail/article-detail.component';
 import { DetailComponent } from './detail/detail.component';
+import { RightContentComponent } from './right-content/right-content.component';
 
 import { MusicModule } from './music/music.module';
 
@@ -35,7 +36,8 @@ import { MusicModule } from './music/music.module';
         FooterComponent,
         ListComponent,
         ArticleDetailComponent,
-        DetailComponent
+        DetailComponent,
+        RightContentComponent
     ],
     providers: [
         { provide: NZ_I18N, useValue: zh_CN },

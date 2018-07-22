@@ -16,7 +16,6 @@ import { ArticleComponent } from './article/article.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 
 
-import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { LoginComponent } from './login/login.component';
 
 
@@ -28,7 +27,6 @@ registerLocaleData(zh);
         FormsModule,
         NgZorroAntdModule,
         AdminRoutingModule,
-        LMarkdownEditorModule
     ],
     declarations: [
         AdminComponent,
