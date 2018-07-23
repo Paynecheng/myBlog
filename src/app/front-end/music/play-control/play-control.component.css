@@ -108,6 +108,9 @@
 .time p{
     margin-top: 15px;
 }
+.time i{
+    font-style: normal;
+}
 #right-control span{
     display: inline-block;
     cursor:pointer;
@@ -138,7 +141,6 @@
     background: url("/assets/images/playbar.png") no-repeat -31px -248px;
 }
 #play-type {
-    /*margin-top: 10px;*/
     background: url("/assets/images/playbar.png") no-repeat -3px -344px;
 }
 #play-type:hover{
