@@ -1,3 +1,11 @@
+.music-page{
+    background: #ffffff;
+    opacity: .5;
+    min-height: 1487px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
 h2{
     color: #fff;
 }
@@ -5,6 +13,6 @@ h2{
     float: left;
     width: 70%;
     height: 500px;
-    opacity: .9;
-    background: radial-gradient(circle, #563C6E, #3C3F72);
+    /*opacity: .9;*/
+    /*background: radial-gradient(circle, #563C6E, #3C3F72);*/
 }

@@ -15,6 +15,7 @@ export class FrontEndService {
     private getArticleUrl = `${host}frontEnd/article`;
     private getListUrl = `${host}list/`;
     private detailArticle = `${host}detail/article/`;
+    private getArticleFiveur = `${host}frontEnd/articleFive`;
 
     getCategory(): Observable<any> {
       return this.http.get(this.getCategoryUrl);
@@ -30,6 +31,10 @@ export class FrontEndService {
 
     getDetailArticle(id: string): Observable<any> {
         return this.http.get(this.detailArticle + id);
+    }
+
+    getArticleFive(): Observable<any> {
+        return this.http.get(this.getArticleFiveur);
     }
 }
 

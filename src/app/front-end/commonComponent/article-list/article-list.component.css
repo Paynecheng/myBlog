@@ -1,5 +1,8 @@
 .articleList{
     box-sizing: border-box;
+    margin: 0 10px 30px 10px;
+    border: 1px solid #bababa;
+    border-radius: 6px;
 }
 .articleList a{
     display: block;
@@ -15,9 +18,4 @@
 }
 .home_text{
     line-height: 30px;
-}
-.articleList{
-    margin-bottom: 30px;
-    background: #fff;
-    opacity: .5;
 }

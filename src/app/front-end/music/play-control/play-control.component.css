@@ -4,6 +4,8 @@
     width: 1200px;
     height: 50px;
     background: #303030;
+    opacity: .8;
+    z-index: 1;
 }
 .control-box>div{
     float: left;
